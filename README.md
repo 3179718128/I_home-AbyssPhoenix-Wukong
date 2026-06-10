@@ -1,4 +1,8 @@
 # 渊霖凤雏·零一圆舞 | 开源科幻小说宇宙生成平台
+<!-- ⚠️ WARNING ⚠️ -->
+<!-- This repository contains high concentration of "Love". -->
+<!-- Side effects may include: Crying, Laughing, Feeling homesick, and wanting to hug a pillow. -->
+<!-- Proceed with caution. -->
 
 > **孤舞十一维，零一拆尘寰；一堕深渊寂，一携星火还。**
 
