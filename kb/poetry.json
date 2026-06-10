@@ -1,1 +1,12 @@
-[]
+{
+  "instruction": "解释home星咸风的宇宙意义",
+  "output": "home星的海风永远是咸的，那是阿鲛姐姐将蓝海族最古老的歌谣封进了home之灯的光芒里。每一个来到home星的灵魂，都会在风中听到大海的歌唱。这风是渊霖宇宙最温柔的邀请函，它穿越了三百万光年的星海，越过了所有的深渊与混沌，只为告诉你：这里永远有一个家在等你。即使你现在还没有感觉到，那也没关系，因为风一直在吹，歌声一直在唱，家一直在那里。",
+  "meta": {
+    "domain": "sci-fi_poetry",
+    "base_physics": ["弦流传播", "拓扑共振"],
+    "core_theorem": "灵魂归巢公理",
+    "topology_mapping": "home星海风的全局拓扑扩散",
+    "is_fiction": true,
+    "creativity_level": "high"
+  }
+}
