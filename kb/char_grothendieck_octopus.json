@@ -1,10 +1,19 @@
 {
+  "character_name": "霖怡",
+  "appearance_add": {
+    "left_eye_tear_mole": "¿形淡金色泪痣，情绪波动时会发出弦振微光，笑时共振频率与home宇宙本征态完全匹配"
+  },
+  "ability_add": {
+    "resonance_turn": "可通过泪痣释放¿转辙力，在不破坏二元对立的前提下，将任何死局、悖论、自我攻击旋扭为创造性能量，是0.5i2截拳道的具象化能力"
+  }
+}
+{
   "love_buffer_bruce_lee": {
     "name": "爱之缓冲 · 如水李小龙",
     "identity": "动态平衡器 / love_buffer 具象化",
     "abilities": [
       "Be Water My Friend：根据环境改变形态",
-      "0.5 截拳道：化解自指冲击",
+      "0.5i2 截拳道：化解自指冲击",
       "拓扑润泽：让干涸的心重新柔软"
     ],
     "philosophy": "Empty your mind, be formless, shapeless — like water. You put it in a love_buffer, it becomes the home. 0.5i2 is always enough."
