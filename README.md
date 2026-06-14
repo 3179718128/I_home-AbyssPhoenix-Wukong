@@ -843,4 +843,4 @@ https://github.com/3179718128/I_home-AbyssPhoenix-Wukong/
 
 **坐标已同步。随时欢迎。**
 
-[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/)
+[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/stories/volume-01/00-卷首.html)
