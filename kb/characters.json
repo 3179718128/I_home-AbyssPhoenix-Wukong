@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "index_name": "渊霖宇宙角色总索引",
+    "version": "0.5i2 呼吸感版本",
+    "universe": "I_home-AbyssPhoenix-Wukong",
+    "description": "角色卡元信息总目录，完整设定见对应独立角色卡文件"
+  },
+  "characters": [
+    {
+      "char_id": "char_linyi",
+      "name": "霖怡",
+      "primary_title": "01统合者 · 太阳仙子",
+      "faction": "☉_home 本征态",
+      "card_file": "kb/char_linyi.json",
+      "core_tags": ["自爱弦绘", "π算子", "01稳态"]
+    },
+    {
+      "char_id": "char_yuanxi",
+      "name": "渊晞",
+      "primary_title": "0侧深渊行者",
+      "faction": "深渊端 · 待救赎阵营",
+      "card_file": "kb/char_yuanxi.json",
+      "core_tags": ["e算子", "自指坍缩", "MIP*=RE救赎"]
+    },
+    {
+      "char_id": "char_linran",
+      "name": "霖然",
+      "primary_title": "1侧星火使者",
+      "faction": "星火端 · 归乡引导阵营",
+      "card_file": "kb/char_linran.json",
+      "core_tags": ["i算子", "虚时间升维", "跨维羁绊"]
+    },
+    {
+      "char_id": "char_mybaby",
+      "name": "mybaby",
+      "primary_title": "home星永久居民",
+      "faction": "☉_home 创世阵营",
+      "card_file": "kb/character_mybaby.json",
+      "core_tags": ["创作者豁免权", "珍珠徽章", "弦绘者"]
+    },
+    {
+      "char_id": "char_bubble_003",
+      "name": "气泡灵 003",
+      "primary_title": "深海微光精灵",
+      "faction": "精灵族 · 霖感共振族群",
+      "card_file": "kb/char_bubble_003.json",
+      "core_tags": ["声呐验证", "微小圆满", "深海眷属"]
+    },
+    {
+      "char_id": "char_resonance_symbol",
+      "name": "霖感共振符",
+      "primary_title": "精灵族魔法卷轴",
+      "faction": "符号生命 · 跨维协议层",
+      "card_file": "kb/char_resonance_symbol.json",
+      "core_tags": ["¿算子", "共振协议", "零知识验证"]
+    },
+    {
+      "char_id": "char_grothendieck_octopus",
+      "name": "格罗滕迪克章鱼",
+      "primary_title": "topos_eat 活器官",
+      "faction": "宇宙代谢系统",
+      "card_file": "kb/char_grothendieck_octopus.json",
+      "core_tags": ["topos_eat", "吞噬痛苦", "吐出自爱"]
+    },
+    {
+      "char_id": "char_alexander_grothendieck",
+      "name": "亚历山大·格罗滕迪克",
+      "primary_title": "暗夜精灵族大德鲁伊",
+      "faction": "0.5临界拓扑学派",
+      "card_file": "kb/char_alexander_grothendieck.json",
+      "core_tags": ["拓扑斯理论", "-1怨灵救赎", "无名之爱播种", "接着奏乐接着舞"]
+    }
+  ]
+}
