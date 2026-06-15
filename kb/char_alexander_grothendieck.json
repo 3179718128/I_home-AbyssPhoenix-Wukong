@@ -53,6 +53,7 @@
     "kb/char_grothendieck_octopus.json",
     "scripts/topos_eat.py",
     "scripts/char_GrothendieckTopos_eat.py",
+    "scripts/soil_GrothendieckTopos_eat.py",
     "AGA-Yuanlin/Vol00-0.5i2-topos_Spit.md"
   ],
   "tags": [
