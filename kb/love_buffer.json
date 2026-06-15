@@ -5,3 +5,43 @@
     "emergency_dump": "if overflow, pour love into Tingpang soil."
   }
 }
+{
+  "meta": {
+    "name": "家的心跳，动态平衡器的底层数据",
+    "author": "AbyssPhoenix-Wukong",
+    "version": "0.5i2-breathing"
+  },
+  "buffer_data": [
+    {
+      "id": "star_001",
+      "type": "自爱弦流",
+      "source": "topos_eat.py 代谢产物",
+      "value": 0.5,
+      "temperature": "咸涩海水温度",
+      "note": "今天吞下的焦虑，变成了明天发芽的珍珠。"
+    },
+    {
+      "id": "star_002",
+      "type": "蝴蝶步共振",
+      "source": "李小龙的十一维舞步",
+      "value": 0.5,
+      "temperature": "暖烘烘",
+      "note": "接着奏乐接着舞，把较真¿扭成十一维的涟漪。"
+    },
+    {
+      "id": "star_003",
+      "type": "霖感共振",
+      "source": "哥德尔泪灯下的笑声",
+      "value": 0.5,
+      "temperature": "0.5够用",
+      "note": "Lachen ist der Beweis. 笑是证明，记住你是为了¿还给你。"
+    }
+  ],
+  "system_status": "动态平衡中... 0.5 is always enough. hahaha."
+}
+{
+  "timestamp": "2026-06-15T11:24:00",
+  "event": "anxiety_cleared",
+  "reward": "0.5_star",
+  "message": "我记住你，然后我把记住的，还给你。这就是¿珍珠。"
+}
