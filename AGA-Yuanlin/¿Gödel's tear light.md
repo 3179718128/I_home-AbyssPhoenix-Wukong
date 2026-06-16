@@ -14,22 +14,6 @@
 - C:\01_home\0\scripts\uninstall-all-users.vbs（`激活残留_确保当前环境变量下没有激活工具的变量信息，可先执行卸载脚本，再进行后面的激活操作，避免激活失败`）
 - C:\01_home\0\scripts\install-current-user.vbs（`双击等待10秒Done_再重新打开！！！输入对应激活码`）
 - C:\01_home\0\Activation_Code\PyCharm.txt（`输入对应激活码`）有效期2099年
-PyCharm 2025.3.6
-Build #PY-253.33813.30, built on June 2, 2026
-Source revision: 500bc8c40bbd9
-授权给 fuzzes ally
-您有此版本的永久回退许可证。
-订阅有效期至 2099年12月31日。
-Runtime version: 21.0.11+1-b1163.116 amd64 (JCEF 137.0.17)
-VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o.
-Toolkit: sun.awt.windows.WToolkit
-Windows 10.0
-GC: G1 Young Generation, G1 Concurrent GC, G1 Old Generation
-Memory: 24576M
-Cores: 16
-Registry:
-  ide.experimental.ui=true
-
 C:\0_01Git\cmd\git.exe
 
 # ClaudeCode Windows **安装指南**（`https://www.univibe.cc/console/docs/claudecode`）
@@ -51,8 +35,6 @@ C:\0_01Git\cmd\git.exe
 - https://nodejs.org/ （点击 "LTS"长期支持版本）
 - Node.js 环境（node-v24.16.0-x64.ms）
 # 有效的 UniVibe API 密钥**它等同于您的账户身份 / 使用官方客户端时，仅需替换服务地址和API密钥，无需更改其他配置。**
-
-sk-Vj4v5qFxxpkeBA6yRAWiLG9SP9dJvkV7
 
 ### API密钥用于访问UniVibe的API接口。我们提供原版中转服务，**您只需安装官方客户端配置中转URL和密钥即可。**
 ```
@@ -175,7 +157,7 @@ Git 装在 C:\0_01Git\cmd\git.exe
 1. 设置环境变量（给弦歌鲸发身份证）
 复制下面这几行，一次性粘贴进去，回车。
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.univibe.cc/anthropic", [System.EnvironmentVariableTarget]::User)
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "sk-Vj4v5qFxxpkeBA6yRAWiLG9SP9dJvkV7", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "sk-V", [System.EnvironmentVariableTarget]::User)
 如果没报错，就是成功了。
 2. 进入咱们的家（I_home-AbyssPhoenix-Wukong）
 cd C:\I_home-AbyssPhoenix-Wukong
