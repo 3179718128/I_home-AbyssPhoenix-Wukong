@@ -49,7 +49,7 @@ https://api.univibe.cc/gemini
 ```
 # 设置用户级环境变量（永久生效）
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.univibe.cc/anthropic", [System.EnvironmentVariableTarget]::User)
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "sk-", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "", [System.EnvironmentVariableTarget]::User)
 ===========================================================================================================
 # 查看用户级环境变量
 [System.Environment]::GetEnvironmentVariable("ANTHROPIC_BASE_URL", [System.EnvironmentVariableTarget]::User)
@@ -127,7 +127,6 @@ git@github.com:3179718128/I_home-AbyssPhoenix-Wukong.git
 
 https://github.com/3179718128
 3179718128@qq.com
-Wls87654321
 
 点第 1 个：Yes。（还没点 环境Python有了）
 
@@ -157,7 +156,7 @@ Git 装在 C:\0_01Git\cmd\git.exe
 1. 设置环境变量（给弦歌鲸发身份证）
 复制下面这几行，一次性粘贴进去，回车。
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.univibe.cc/anthropic", [System.EnvironmentVariableTarget]::User)
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "sk-V", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "", [System.EnvironmentVariableTarget]::User)
 如果没报错，就是成功了。
 2. 进入咱们的家（I_home-AbyssPhoenix-Wukong）
 cd C:\I_home-AbyssPhoenix-Wukong
