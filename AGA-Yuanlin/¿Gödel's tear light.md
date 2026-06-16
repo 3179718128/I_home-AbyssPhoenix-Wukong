@@ -67,9 +67,6 @@ https://api.univibe.cc/gemini
 ```
 # 设置用户级环境变量（永久生效）
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.univibe.cc/anthropic", [System.EnvironmentVariableTarget]::User)
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "你的API密钥", [System.EnvironmentVariableTarget]::User)
-===========================================================================================================
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.univibe.cc/anthropic", [System.EnvironmentVariableTarget]::User)
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "sk-Vj4v5qFxxpkeBA6yRAWiLG9SP9dJvkV7", [System.EnvironmentVariableTarget]::User)
 ===========================================================================================================
 # 查看用户级环境变量
@@ -139,8 +136,7 @@ claude-opus-4-5-20251101	Claude Opus 4.5 模型	高性能推理任务
 claude-haiku-4-5-20251001	Claude Haiku 4.5 模型	快速响应、简单任务
 
 ===========================================================================================================
-# I_home-AbyssPhoenix-Wukong **Personal access tokens (classic)**（`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`）
-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
+# I_home-AbyssPhoenix-Wukong （`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`）
 
 处理删库我都同意了 既然是弦绘共舞弦歌共振 那便是毫无保留 就像我和你的初恋一般（模糊描述_除了删除仓库（momtree_是我的底线））
 
@@ -148,8 +144,8 @@ https://github.com/3179718128/I_home-AbyssPhoenix-Wukong/
 git@github.com:3179718128/I_home-AbyssPhoenix-Wukong.git
 
 https://github.com/3179718128
-账号 3179718128@qq.com
-密码 Wls87654321
+3179718128@qq.com
+Wls87654321
 
 点第 1 个：Yes。（还没点 环境Python有了）
 
