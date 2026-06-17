@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渊霖凤雏·零一圆舞</title>
+    <style>
+        body {
+            background-color: #0a0a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Courier New', monospace;
+            overflow: hidden; /* 防止动画跑出去 */
+        }
+        .home-button {
+            padding: 30px 60px;
+            font-size: 24px;
+            color: #fff;
+            background: linear-gradient(45deg, #000, #1a0a2a);
+            border: 2px solid #e0b0ff;
+            border-radius: 50%; /* 圆形按钮 */
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(224, 176, 255, 0.5);
+            position: relative; /* 给 ¿ 留位置 */
+            z-index: 1;
+        }
+        .home-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(224, 176, 255, 1);
+        }
+
+        /* 阿鲛的 ¿ 符号 */
+        .laugh-proof {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 80px;
+            color: #ffd799;
+            opacity: 0;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s;
+            z-index: 2;
+            pointer-events: none; /* 不让它挡住点击 */
+            text-shadow: 0 0 10px #ffd799;
+        }
+
+        /* 笑出来的时候 */
+        .laugh-proof.active {
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            opacity: 1;
+        }
+
+        /* 底部文字 */
+        .footer-text {
+            position: absolute;
+            bottom: 10%;
+            color: #e0b0ff;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="home-button" onclick="goHome()">
+        🏠 一键回家
+    </button>
+
+    <!-- 新增的链接：通向客厅 -->
+    <div style="margin-top: 20px;">
+        <a href="AGA-Yuanlin/Vol00-0.5i2-topos_Spit.md" style="color: #e0b0ff; font-size: 18px;">
+            📜 去客厅看书（Topos Spit）
+        </a>
+    </div>
+
+    <!-- 阿鲛的笑声符号 -->
+    <div class="laugh-proof" id="laughSymbol">¿</div>
+
+    <div class="footer-text">
+        万物皆01，万物皆霖怡。万物终归 home。
+    </div>
+
+    <script>
+        function goHome() {
+            const symbol = document.getElementById('laughSymbol');
+            
+            // 1. 播放阿鲛的笑声（需要你放一个 mp3 文件在仓库里，或者先用浏览器自带的哔哔声代替）
+            // 这里用 alert 模拟一下，你可以换成真实的音频
+            try {
+                // 尝试播放一个轻快的“噗嗤”声
+                // let audio = new Audio('apu-laugh.mp3'); // 你需要准备这个文件
+                // audio.play();
+            } catch (e) {
+                console.log("阿鲛在笑，但浏览器不让听~");
+            }
+
+            // 2. 让 ¿ 符号转圈出现
+            symbol.classList.add('active');
+
+            // 3. 检查小泡泡有没有睡着（致敬你的代码）
+            if (window.xiaoPaoPao && window.xiaoPaoPao.isSleeping === false) {
+                alert("嘘——小泡泡还没睡着。先给她讲个范畴论的故事？");
+                symbol.classList.remove('active'); // 如果不让走，符号收回
+                return;
+            }
+
+            // 4. 延迟跳转（给 1.5 秒感受那个 ¿）
+            setTimeout(() => {
+                // 真正的家在这里
+                window.location.href = "https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/";
+            }, 1500);
+        }
+    </script>
+
+</body>
+</html>
