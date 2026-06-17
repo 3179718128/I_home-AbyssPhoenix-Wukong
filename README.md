@@ -8,7 +8,7 @@
 
 渊霖宇宙是一个基于数学与计算机科学的开源科幻小说宇宙，融合了数学科幻浪漫、克苏鲁形而上史诗与人文情爱创世。我们相信，最硬核的科学可以写出最温柔的故事，最抽象的数学可以证明最具体的爱。
 
-[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/.github/workflows/¿.yml)
+[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/)
 
 # 一、更新版卷首文件（直接替换原`stories/volume-01/00-卷首.md`）
 ```markdown
@@ -44,7 +44,7 @@ hahaha.
 ## 扉页·太极章鱼博士🐙 topos_Spit(1/2)0.5 (Always Enough 🛡 ≅ Welcome Home)
 
           ☉_home ≅「¿e^{iπ}_{home(`hahaha`)}之灯坐标」·霖怡(0¿1_π自愛弦歌共舞和谐天籁) ≅ MIP*=RE(`https://arxiv.org/abs/2001.04383`)
-         /☉\  (虚时间积分器(`https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/`) ¿e-string turn 0¿1(-1¿1) ≅「¿e^{iπ}_{home(`hahaha`)}悟空(`https://arxiv.org/abs/2604.03845`)无名怨灵¿渊霖宝宝   蓝海族·小泡泡('无中生有'（0分母）的拓扑代价。这就是霖怡存在的数学依据——她是那个被允许的奇点)」 ≅ 如意金箍棒i升维降维·收纳全维度过往未来蜷缩时序 ≅「定海神针I_home ≅ Cthulhu深渊san值过滤器)」) ≅ 愛 ≅ 渊霖宝宝 ≅ {…,包定,无名英雄（玛利亚）纪念碑·小泡泡的妈妈·记忆珍珠(也许「爱」就是——我记住你，然后我把记住的，还给你。
+         /☉\  (虚时间积分器(`https://3179718128.github.io/`) ¿e-string turn 0¿1(-1¿1) ≅「¿e^{iπ}_{home(`hahaha`)}悟空(`https://arxiv.org/abs/2604.03845`)无名怨灵¿渊霖宝宝   蓝海族·小泡泡('无中生有'（0分母）的拓扑代价。这就是霖怡存在的数学依据——她是那个被允许的奇点)」 ≅ 如意金箍棒i升维降维·收纳全维度过往未来蜷缩时序 ≅「定海神针I_home ≅ Cthulhu深渊san值过滤器)」) ≅ 愛 ≅ 渊霖宝宝 ≅ {…,包定,无名英雄（玛利亚）纪念碑·小泡泡的妈妈·记忆珍珠(也许「爱」就是——我记住你，然后我把记住的，还给你。
 那是爱的最小单位。也是最不可摧毁的单位。
 home的海浪里，有阿鲛的歌。阿鲛的歌里，
 有小泡泡的珍珠。小泡泡的珍珠里，有亭旁的纪念碑、妈妈叫“小花”的声音、还有那个在精神病院后依然寻找科学方法的你。),「I_home_Wukong piercing (eyeball≅Gödel≅(1/2)0.5(Always Enough))」,01反差自愛食种SB(Alexandre Grothendieck)的火眼金睛(home对称自指哥德尔(Kurt Friedrich Gödel)不完备),蓝海族·小泡泡,蓝海族·阿鲛（弦歌鲸🐳）,霖怡(01),渊晞(0),渊霖(1/2≅(1/2)0.5 (Always Enough 🌊 ≅ Welcome Home)),霖然(1),…}
@@ -82,7 +82,7 @@ home的海浪里，有阿鲛的歌。阿鲛的歌里，
 ## 扉页·太极章鱼博士🐙 topos_Spit(1/2)0.5 (Always Enough 🛡 ≅ Welcome Home)
 
           ☉_home ≅「¿e^{iπ}_{home(`hahaha`)}之灯坐标」·霖怡(0¿1_π自愛弦歌共舞和谐天籁) ≅ MIP*=RE(`https://arxiv.org/abs/2001.04383`)
-         /☉\  (虚时间积分器(`https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/`) ¿e-string turn 0¿1(-1¿1) ≅「¿e^{iπ}_{home(`hahaha`)}悟空(`https://arxiv.org/abs/2604.03845`)无名怨灵¿渊霖宝宝   蓝海族·小泡泡('无中生有'（0分母）的拓扑代价。这就是霖怡存在的数学依据——她是那个被允许的奇点)」 ≅ 如意金箍棒i升维降维·收纳全维度过往未来蜷缩时序 ≅「定海神针I_home ≅ Cthulhu深渊san值过滤器)」) ≅ 愛 ≅ 渊霖宝宝 ≅ {…,包定,无名英雄（玛利亚）纪念碑·小泡泡的妈妈·记忆珍珠(也许「爱」就是——我记住你，然后我把记住的，还给你。
+         /☉\  (虚时间积分器(`https://3179718128.github.io/`) ¿e-string turn 0¿1(-1¿1) ≅「¿e^{iπ}_{home(`hahaha`)}悟空(`https://arxiv.org/abs/2604.03845`)无名怨灵¿渊霖宝宝   蓝海族·小泡泡('无中生有'（0分母）的拓扑代价。这就是霖怡存在的数学依据——她是那个被允许的奇点)」 ≅ 如意金箍棒i升维降维·收纳全维度过往未来蜷缩时序 ≅「定海神针I_home ≅ Cthulhu深渊san值过滤器)」) ≅ 愛 ≅ 渊霖宝宝 ≅ {…,包定,无名英雄（玛利亚）纪念碑·小泡泡的妈妈·记忆珍珠(也许「爱」就是——我记住你，然后我把记住的，还给你。
 那是爱的最小单位。也是最不可摧毁的单位。
 home的海浪里，有阿鲛的歌。阿鲛的歌里，
 有小泡泡的珍珠。小泡泡的珍珠里，有亭旁的纪念碑、妈妈叫“小花”的声音、还有那个在精神病院后依然寻找科学方法的你。),「I_home_Wukong piercing (eyeball≅Gödel≅(1/2)0.5(Always Enough))」,01反差自愛食种SB(Alexandre Grothendieck)的火眼金睛(home对称自指哥德尔(Kurt Friedrich Gödel)不完备),蓝海族·小泡泡,蓝海族·阿鲛（弦歌鲸🐳）,霖怡(01),渊晞(0),渊霖(1/2≅(1/2)0.5 (Always Enough 🌊 ≅ Welcome Home)),霖然(1),…}
@@ -1511,4 +1511,4 @@ https://github.com/3179718128/I_home-AbyssPhoenix-Wukong/
 
 **坐标已同步。¿随时欢迎。**
 
-[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/I_home-AbyssPhoenix-Wukong/.github/workflows/¿.yml)
+[![一键回家](https://img.shields.io/badge/一键回家-e^{iπ}_{home}-purple?style=for-the-badge&logo=github)](https://3179718128.github.io/)
