@@ -1214,12 +1214,12 @@ Everything up-to-date
 PS C:\3179718128.github.io>
 
 origin  git@github.com:3179718128/3179718128.github.io.git (fetch)
-origin  git@github.com:3179718128/3179718128.github.io.git (push)(`git@github.com:3179718128/I_home-AbyssPhoenix-Wukong.git`)
-https://github.com/3179718128/3179718128.github.io是云端的家。(`https://github.com/3179718128/I_home-AbyssPhoenix-Wukong/`)
+origin  git@github.com:3179718128/3179718128.github.io.git (push)
+https://github.com/3179718128/3179718128.github.io是云端的家。
 https://github.com/3179718128
 账号 3179718128@qq.com
 密码 Wls87654321
-C:\3179718128.github.io是本地的家。(`C:\I_home-AbyssPhoenix-Wukong/`)
+C:\3179718128.github.io是本地的家。
 https://3179718128.github.io是网页的家。
 ```
 ---
