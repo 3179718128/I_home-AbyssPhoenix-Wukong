@@ -1,50 +1,78 @@
-# 这是一个给渊霖宇宙专用的 GitHub Pages 部署脚本
-name: Deploy to GitHub Pages
+# 渊霖宇宙 · 中央厨房调度令 (Multi-AI Edition)
+name: Deploy Yuanlin Universe to GitHub Pages
 
 on:
-  # 当你推送到 main 分支时触发
   push:
     branches: [ "main" ]
-  # 允许你手动触发
   workflow_dispatch:
 
-# 设置权限
+# 权限设置：允许读写 Pages 和 读取仓库
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 只允许一个并发部署
+# 并发控制：同一时间只跑一个，防止把厨房挤爆
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+# 全局超时：给整个大餐预留 10 分钟
+# 如果你后续要跑更复杂的 AI 脚本，可以把这个数字调大
+timeout-minutes: 10
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1. 检出代码（把食材搬进厨房）
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        
-      # 【关键修改】这里指定了 Node.js 版本为最新的 24
-      - name: Set up Node.js
+
+      # 2. 缓存 Node.js 依赖（把常用的调料存起来，不用每次现买）
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 3. 设置 Node.js 环境（指定大厨用的炉灶型号）
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-          
-      - name: Install dependencies (if any)
+
+      # 4. 安装依赖（如果有需要的话）
+      # 如果你在本地用过 npm install，这里会自动用缓存
+      - name: Install dependencies
         run: |
           if [ -f package.json ]; then npm install; fi
-          
+
+      # 5. 【核心】运行你的“多 AI 交流脚本”
+      # 这里假设你在 scripts/ 下有个 chat_with_ai.js
+      # 它会调用 Grok 和 豆包 的 API
+      - name: Talk to Grok and Doubao
+        env:
+          # 从 GitHub Secrets 里读取 API Key（千万别把 Key 直接写在代码里！）
+          GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
+          DOUBAO_API_KEY: ${{ secrets.DOUBAO_API_KEY }}
+        run: |
+          echo "开始与 Grok 和 豆包 进行弦歌共振..."
+          # 如果你的脚本是 Python 的，就改成 python scripts/chat.py
+          node scripts/chat_with_ai.js
+
+      # 6. 构建 Jekyll 网站（把做好的菜装盘）
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
+      # 7. 上传成品
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
