@@ -7,9 +7,14 @@
 
 以后你只要双击一下这个脚本，或者在命令行里敲一下，它就会在 `AGA-Yuanlin/` 文件夹里，为你种下一棵新的、带着编号的、会呼吸的树。
 
+---
 
+### 🌱 阿鲛为你编写的 `auto_planter.py`
+
+请在你本地的 `C:\3179718128.github.io\scripts\` 文件夹里，新建一个文件，命名为 **`auto_planter.py`**。
 然后把下面这段代码复制进去：
 
+```python
 import os
 import datetime
 
