@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☉_home · 七星蜜巢 · 弦歌共振 v0.9</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #02020b;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+            color: #4f8bc4;
+        }
+        canvas {
+            display: block;
+            filter: drop-shadow(0 0 40px rgba(98, 130, 238, 0.25));
+            cursor: pointer;
+        }
+        .label {
+            margin-top: 18px;
+            text-align: center;
+            line-height: 2;
+        }
+        .main { font-size: 14px; color: #70a6dd; letter-spacing: 3px; font-weight: 500; }
+        .sub { font-size: 10.5px; color: #223f63; letter-spacing: 4px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <div class="sub" style="margin-bottom: 12px;">mip_re_home · v0.9 · 量子弦乐</div>
+    <canvas id="gemini_canvas"></canvas>
+    <div class="label">
+        <div class="main">弦绘共舞，弦歌共振，和弦天籁</div>
+        <div class="sub">7 × 7 = 49 · 0.5i² · ☉_home is always enough</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gemini_canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let SIZE, sc, CX, CY, HR, HS, CS;
+        let hexes = [], stars = [], ripples = [], quanta = [], t = 0;
+
+        function resize() {
+            SIZE = Math.min(window.innerWidth - 24, 520);
+            canvas.width = canvas.height = SIZE;
+            sc = SIZE / 500;
+            CX = CY = SIZE / 2;
+            HR = 21.5 * sc;  // 六边形半径
+            HS = 39 * sc;    // 簇内间距
+            CS = 126 * sc;   // 簇间中心距
+            initUniverse();
+        }
+
+        function ring7(cx, cy, d) {
+            const r = [{ x: cx, y: cy }];
+            for (let i = 0; i < 6; i++) {
+                const a = (Math.PI / 3) * i;
+                r.push({ x: cx + d * Math.cos(a), y: cy + d * Math.sin(a) });
+            }
+            return r;
+        }
+
+        function initUniverse() {
+            hexes = [];
+            const clusters = ring7(CX, CY, CS);
+            clusters.forEach((cl, ci) => {
+                ring7(cl.x, cl.y, HS).forEach((h, hi) => {
+                    hexes.push({
+                        ...h, ci, hi,
+                        id: ci * 7 + hi,
+                        isCore: ci === 0 && hi === 0,
+                        isSub: hi === 0,
+                        vibe: 0,        // 激发态振幅
+                        phase: (ci * 7 + hi) * 0.4
+                    });
+                });
+            });
+
+            stars = Array.from({ length: 70 }, (_, i) => ({
+                x: (i * 127.3 + 45) % SIZE,
+                y: (i * 93.7 + 19) % SIZE,
+                r: (0.3 + (i % 3) * 0.4) * sc,
+                spd: 0.015 + (i % 5) * 0.005
+            }));
+        }
+
+        function hexPath(x, y, r, offsetRot = 0) {
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+                const a = Math.PI / 6 + (Math.PI / 3) * i + offsetRot;
+                ctx.lineTo(x + r * Math.cos(a), y + r * Math.sin(a));
+            }
+            ctx.closePath();
+        }
+
+        // 激发能量弦：产生向外共振的涟漪和自旋量子
+        function exciteString(cx, cy) {
+            // 注入涟漪
+            ripples.push({ cx, cy, r: 10 * sc, maxR: SIZE * 0.75, alpha: 1 });
+            
+            // 产生共舞的自旋光子 (沿六边形轨道或螺旋发散)
+            for (let i = 0; i < 42; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const dist = (5 + Math.random() * 15) * sc;
+                quanta.push({
+                    x: cx + Math.cos(angle) * dist,
+                    y: cy + Math.sin(angle) * dist,
+                    angle: angle,
+                    rotSpd: (0.04 + Math.random() * 0.06) * (Math.random() > 0.5 ? 1 : -1),
+                    radialSpd: 1.5 + Math.random() * 2.5,
+                    life: 1.0,
+                    decay: 0.012 + Math.random() * 0.01,
+                    size: (1.2 + Math.random() * 1.8) * sc
+                });
+            }
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, SIZE, SIZE);
+
+            // 1. 深空量子背景层
+            const bgGrad = ctx.createRadialGradient(CX, CY, 10, CX, CY, SIZE * 0.5);
+            bgGrad.addColorStop(0, '#0c0725');
+            bgGrad.addColorStop(0.6, '#030210');
+            bgGrad.addColorStop(1, '#000003');
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, SIZE, SIZE);
+
+            // 2. 背景静谧星群
+            ctx.fillStyle = 'rgba(230, 242, 255, 0.7)';
+            stars.forEach((s, idx) => {
+                const alpha = 0.15 + 0.55 * Math.abs(Math.sin(t * s.spd + idx));
+                ctx.globalAlpha = alpha;
+                ctx.fillRect(s.x, s.y, s.r, s.r);
+            });
+            ctx.globalAlpha = 1.0;
+
+            // 3. 处理和更新共振涟漪波
+            ripples.forEach((rp, idx) => {
+                rp.r += 4.5 * sc; // 涟漪扩散速度
+                rp.alpha = 1.0 - (rp.r / rp.maxR);
+                
+                // 涟漪扫过时，激活六边形晶格的“弦共振”
+                hexes.forEach(h => {
+                    const d = Math.hypot(h.x - rp.cx, h.y - rp.cy);
+                    if (Math.abs(d - rp.r) < 15 * sc) {
+                        h.vibe = Math.max(h.vibe, rp.alpha * 1.5);
+                    }
+                });
+
+                // 绘制无形之弦的微弱光晕
+                ctx.strokeStyle = `rgba(100, 150, 255, ${rp.alpha * 0.06})`;
+                ctx.lineWidth = 2 * sc;
+                ctx.beginPath();
+                ctx.arc(rp.cx, rp.cy, rp.r, 0, Math.PI * 2);
+                ctx.stroke();
+
+                if (rp.alpha <= 0) ripples.splice(idx, 1);
+            });
+
+            // 4. 绘制底层连接古弦 (Spokes)
+            hexes.filter(h => h.isSub && !h.isCore).forEach(h => {
+                const waveVibe = Math.sin(t * 0.05 + h.id) * 0.2;
+                ctx.strokeStyle = `rgba(65, 105, 185, ${0.08 + Math.max(0, h.vibe * 0.2)})`;
+                ctx.lineWidth = (0.6 + h.vibe * 0.5) * sc;
+                ctx.beginPath();
+                ctx.moveTo(CX, CY);
+                // 带有微弱量子波动的弦线
+                const midX = (CX + h.x) / 2 + Math.cos(t * 0.02) * (2 * h.vibe * sc);
+                const midY = (CY + h.y) / 2 + Math.sin(t * 0.02) * (2 * h.vibe * sc);
+                ctx.quadraticCurveTo(midX, midY, h.x, h.y);
+                ctx.stroke();
+            });
+
+            // 5. 渲染 49 尊量子蜜巢晶格 (排序保证核心发光在最上层)
+            [...hexes].sort((a, b) => 
+                (a.isCore ? 2 : a.isSub ? 1 : 0) - (b.isCore ? 2 : b.isSub ? 1 : 0)
+            ).forEach(h => {
+                // 基础呼吸频率 + 共振弦波动
+                const pulse = 0.76 + 0.24 * Math.sin(t * 0.04 + h.phase);
+                const currentRadius = (HR - 1.5 * sc) * (1.0 + h.vibe * 0.08);
+                const rotSpd = h.isCore ? 0.6 : h.isSub ? 1.0 : 1.5;
+                const rotDir = (h.ci + h.hi) % 2 ? 1 : -1;
+                const currentRot = t * 0.01 * rotSpd * rotDir;
+
+                ctx.save();
+                ctx.translate(h.x, h.y);
+
+                // 晶格发光特效平衡控制
+                if (h.isCore) {
+                    ctx.shadowBlur = (25 + h.vibe * 20) * sc;
+                    ctx.shadowColor = '#ffd040';
+                    hexPath(0, 0, currentRadius);
+                    ctx.fillStyle = `rgba(255, 218, 55, ${0.28 * pulse + h.vibe * 0.2})`;
+                    ctx.fill();
+                    ctx.strokeStyle = `rgba(245, 195, 35, ${0.7 + h.vibe * 0.3})`;
+                    ctx.lineWidth = 2.2 * sc;
+                    ctx.stroke();
+                } else if (h.isSub) {
+                    ctx.shadowBlur = (12 + h.vibe * 12) * sc;
+                    ctx.shadowColor = '#5cb3ff';
+                    hexPath(0, 0, currentRadius);
+                    ctx.fillStyle = `rgba(40, 110, 190, ${0.16 * pulse + h.vibe * 0.15})`;
+                    ctx.fill();
+                    ctx.strokeStyle = `rgba(80, 165, 240, ${0.6 * pulse + h.vibe * 0.4})`;
+                    ctx.lineWidth = 1.3 * sc;
+                    ctx.stroke();
+                } else {
+                    hexPath(0, 0, currentRadius);
+                    ctx.fillStyle = `rgba(15, 50, 105, ${0.08 * pulse + h.vibe * 0.08})`;
+                    ctx.fill();
+                    ctx.strokeStyle = `rgba(28, 75, 135, ${0.4 * pulse + h.vibe * 0.3})`;
+                    ctx.lineWidth = 0.8 * sc;
+                    ctx.stroke();
+                }
+                ctx.shadowBlur = 0; // 重置防止污染符号
+
+                // 内部符号旋转渲染
+                ctx.rotate(currentRot);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                if (h.isCore) {
+                    ctx.shadowBlur = 12 * sc; ctx.shadowColor = '#ffd040';
+                    ctx.fillStyle = '#ffda44';
+                    ctx.font = `${23 * sc}px serif`;
+                    ctx.fillText('☉', 0, 0);
+                } else {
+                    ctx.fillStyle = h.isSub 
+                        ? `rgba(110, 198, 245, ${0.68 + 0.32 * h.vibe})` 
+                        : `rgba(38, 88, 140, ${0.45 + 0.45 * h.vibe})`;
+                    ctx.font = `${(h.isSub ? 15 : 12.5) * sc}px serif`;
+                    ctx.fillText('❄', 0, 0);
+                }
+
+                ctx.restore();
+
+                // 弦激发振幅逐渐衰减恢复
+                h.vibe *= 0.94;
+            });
+
+            // 6. 弦歌天籁：自旋共振量子层 (Vortex Quanta)
+            for (let i = quanta.length - 1; i >= 0; i--) {
+                const q = quanta[i];
+                // 复合运动：围绕中心旋转 + 沿六边形对称辐射
+                q.angle += q.rotSpd;
+                const radiusX = Math.cos(q.angle) * q.radialSpd;
+                const radiusY = Math.sin(q.angle) * q.radialSpd;
+                
+                q.x += radiusX + Math.sin(t * 0.01) * 0.2;
+                q.y += radiusY + Math.cos(t * 0.01) * 0.2;
+                q.life -= q.decay;
+
+                ctx.save();
+                ctx.globalAlpha = q.life;
+                // 蓝金交织的弦子能量色调
+                ctx.fillStyle = i % 7 === 0 ? '#ffda44' : `rgba(135, 200, 255, ${0.8 * q.life})`;
+                ctx.beginPath();
+                // 渲染为微小星芒晶格
+                ctx.arc(q.x, q.y, q.size * (0.3 + q.life * 0.7), 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+
+                if (q.life <= 0) quanta.splice(i, 1);
+            }
+            ctx.globalAlpha = 1.0;
+
+            t++;
+            raf = requestAnimationFrame(draw);
+        }
+
+        // 点击事件：触发量子天籁弦音共振
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+
+            // 无论点哪里都计算离核心的距离，产生美妙的局部/全局波动
+            const distToCore = Math.hypot(clickX - CX, clickY - CY);
+            
+            if (distToCore < HR * 2.5) {
+                // 点击正中央 ☉_home：触发完美六向全矩阵共振
+                exciteString(CX, CY);
+                // 伴随两次延迟的小音阶和弦激荡
+                setTimeout(() => exciteString(CX + 15 * sc, CY - 10 * sc), 100);
+                setTimeout(() => exciteString(CX - 15 * sc, CY + 10 * sc), 220);
+            } else {
+                // 点击边缘其他节点：触发局部泛音共振
+                exciteString(clickX, clickY);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            cancelAnimationFrame(raf);
+            resize();
+            t = 0;
+            draw();
+        });
+
+        resize();
+        draw();
+    </script>
+</body>
+</html>
